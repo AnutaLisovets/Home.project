@@ -6,8 +6,8 @@ int main() {
 	Student st2;
 
 	st.setName("ALEX");
-	st.getAge(14);
-	st.getMark(4);
+	st.setAge(14);
+	st.setMark(4);
 
 	cout << st.getInfo() << endl;
 	cout << st1.getInfo() << endl;
