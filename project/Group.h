@@ -15,11 +15,12 @@ public:
 	~Group();
 
 	string getName(); //прочитать
-	void setName();   //изменить
+	void setName(string name);   //изменить
 	
 	int getCount();
 
-	Student get(int index);
+	Student getCount(int index);
+	void add(Student student);
 
 	string getInfo();
 };
