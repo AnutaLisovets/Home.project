@@ -2,7 +2,8 @@
 #include "Group.h"
 
 int main() {
-	Group group("10a");
+
+	/*Group group("10a");
 	Student st1("Alex", 14,9);
 	Student st2("anna", 13, 8);
 	Student st3("kirilll", 12, 4);
@@ -14,7 +15,7 @@ int main() {
 	group.add(st3);
 	group.add(st4);
 
-	cout << group.getInfo() << endl;
+	cout << group.getInfo() << endl;*/
 
 	/*Student st;
 	Student st1;
