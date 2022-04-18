@@ -1,14 +1,14 @@
-//#pragma once
+п»ї//#pragma once
 //
 ////first input first output
-//class FIFO  //очередь
+//class FIFO  //РѕС‡РµСЂРµРґСЊ
 //{
 //private:
 //	int size;
 //	int *queue;
 //public:
 //	void add(int item);
-//	int remove();			//удаление изочереди
+//	int remove();			//СѓРґР°Р»РµРЅРёРµ РёР·РѕС‡РµСЂРµРґРё
 //	int size();
 //	bool empty();   
 //	void clear();

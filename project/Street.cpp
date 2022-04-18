@@ -1,4 +1,4 @@
-#include "Street.h"
+ï»¿#include "Street.h"
 
 Street::Street() {
 	string name = "no name";
@@ -34,10 +34,10 @@ void Street::setName(string name) {
 	this->name = name;
 }
 
-int Street::getNumber() {				//ïğî÷èòàòü
+int Street::getNumber() {				//Ğ¿Ñ€Ğ¾Ñ‡Ğ¸Ñ‚Ğ°Ñ‚ÑŒ
 	return number;
 }
-void Street::setNumber(int number) {	//èçìåíèòü
+void Street::setNumber(int number) {	//Ğ¸Ğ·Ğ¼ĞµĞ½Ğ¸Ñ‚ÑŒ
 	if (number > 0) {
 		this->number = number;
 	}

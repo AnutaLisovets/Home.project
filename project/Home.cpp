@@ -1,7 +1,4 @@
 #include "Home.h"
-string material;
-int countOfFloors;
-int numberOfInhabitants;
 
 Home::Home() {
     material = "no material";

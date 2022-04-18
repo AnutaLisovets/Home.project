@@ -1,21 +1,37 @@
 //#include "FIFO.h"
 //
-//void add(int item){
+//void add(int item) {
+//
+//	if (list = NULL) {
+//		list = new Home[1];
+//		count = 1;
+//		list[0] = home;
+//	}
+//	else {
+//		Home *temp = new Home[count + 1];
+//		int i = 0;
+//		for (; i < count; i++) {
+//			temp[i] = list[i];
+//		}
+//		temp[i] = home;
+//		delete[] list;
+//		list = temp;
+//		count++;
+//	}
+//}
+//
+//int remove() {
 //
 //}
 //
-//int remove(){
+//int size() {
 //
 //}
 //
-//int size(){
+//bool empty() {
 //
 //}
 //
-//bool empty(){
-//
-//}
-//
-//void clear(){
+//void clear() {
 //
 //}
