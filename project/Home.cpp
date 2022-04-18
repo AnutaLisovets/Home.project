@@ -1,7 +1,7 @@
-#include "home.h"
+#include "Home.h"
 string material;
 int countOfFloors;
-double numberOfInhabitants;
+int numberOfInhabitants;
 
 Home::Home() {
     material = "no material";
@@ -10,7 +10,7 @@ Home::Home() {
 }
 
 //constructor of Student with params
-Home::Home(string material, int countOfFloors, double numberOfInhabitants) {
+Home::Home(string material, int countOfFloors, int numberOfInhabitants) {
     this->material = material;
     this->countOfFloors = countOfFloors;
     this->numberOfInhabitants = numberOfInhabitants;
@@ -43,7 +43,7 @@ int Home::getNumberOfInhabitants() {
     return numberOfInhabitants    ;
 }
 
-void Home::setNumberOfInhabitants(double numberOfInhabitants) {
+void Home::setNumberOfInhabitants(int numberOfInhabitants) {
     if (numberOfInhabitants >= 0 && numberOfInhabitants <= 1000) {
         this->numberOfInhabitants = numberOfInhabitants;
     }

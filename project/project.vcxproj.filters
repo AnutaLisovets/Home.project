@@ -18,9 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Street.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -30,12 +27,12 @@
     <ClCompile Include="Home.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FIFO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Street.h">
@@ -45,6 +42,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Home.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FIFO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,5 +1,5 @@
-#include "Student.h"
-#include "Group.h"
+#include "Home.h"
+#include "Street.h"
 
 int main() {
 

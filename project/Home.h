@@ -4,13 +4,13 @@ class Home {
 private:
     string material;
     int countOfFloors;
-    double numberOfInhabitants;
+    int numberOfInhabitants;
 
 public:
     //defalt constructor of Home
     Home();
     //constructor of Home with params
-    Home(string material, int countOfFloors, double numberOfInhabitants);
+    Home(string material, int countOfFloors, int numberOfInhabitants);
     //destructor of Home
     ~Home();
     string getMaterial();
@@ -18,7 +18,7 @@ public:
     int getCountOfFloors();
     void setCountOfFloors(int countOfFloors);
     int getNumberOfInhabitants();
-    void setNumberOfInhabitants(double numberOfInhabitants);
+    void setNumberOfInhabitants(int numberOfInhabitants);
 
     string getInfo();
 

@@ -1,7 +1,9 @@
-#include "Home.h"
+п»ї#include "Home.h"
 
 class Street
 {
+	friend class Street;
+
 private:
 	string name;
 	string material;
@@ -18,8 +20,8 @@ public:
 	string getName();
 	void setName(string name);
 
-	string getMaterial(); //прочитать
-	void setMaterial(string material);   //изменить
+	string getMaterial(); //РїСЂРѕС‡РёС‚Р°С‚СЊ
+	void setMaterial(string material);   //РёР·РјРµРЅРёС‚СЊ
 
 	int getNumber();
 	void setNumber(int number);
@@ -27,7 +29,7 @@ public:
 	int getCount();
 
 	Home getCount(int index);
-	void add(Home home);
+	/*void add(Home home);*/
 
 	string getInfo();
 };

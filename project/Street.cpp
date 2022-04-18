@@ -1,8 +1,8 @@
 #include "Street.h"
 
 Street::Street() {
-	string material = "no material";
 	string name = "no name";
+	string material = "";
 	int number = 0;
 	int count = 0;
 	list = NULL;
@@ -10,6 +10,7 @@ Street::Street() {
 Street::Street(string name) {
 	string material = "no material";
 	this->name = name;
+	int number = 0;
 	int count = 0;
 	list = NULL;
 }
@@ -62,24 +63,24 @@ Home Street::getCount(int index) {
 	return list[index];
 }
 
-void Street::add(Home home) {
-	if (list = NULL) {
-		list = new Home[1];
-		count = 1;
-		list[0] = home;
-	}
-	else {
-		Home* temp = new Home[count + 1];
-		int i = 0;
-		for (; i < count; i++) {
-			temp[i] = list[i];
-		}
-		temp[i] = home;
-		delete[] list;
-		list = temp;
-		count++;
-	}
-}
+//void Street::add(Home home) {
+//	if (list = NULL) {
+//		list = new Home[1];
+//		count = 1;
+//		list[0] = home;
+//	}
+//	else {
+//		Home* temp = new Home[count + 1];
+//		int i = 0;
+//		for (; i < count; i++) {
+//			temp[i] = list[i];
+//		}
+//		temp[i] = home;
+//		delete[] list;
+//		list = temp;
+//		count++;
+//	}
+//}
 
 string Street::getInfo() {
 	if (list == NULL) {

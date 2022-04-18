@@ -139,18 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FIFO.cpp" />
     <ClCompile Include="Street.cpp" />
     <ClCompile Include="Home.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager.cpp" />
-    <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FIFO.h" />
     <ClInclude Include="Street.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Home.h" />
     <ClInclude Include="Manager.h" />
-    <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
