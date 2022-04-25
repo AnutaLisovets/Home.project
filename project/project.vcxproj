@@ -140,17 +140,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FIFO.cpp" />
+    <ClCompile Include="Leader.cpp" />
     <ClCompile Include="Street.cpp" />
     <ClCompile Include="Home.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="SuperLeader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FIFO.h" />
+    <ClInclude Include="Leader.h" />
     <ClInclude Include="Street.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Home.h" />
     <ClInclude Include="Manager.h" />
+    <ClInclude Include="SuperLeader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
