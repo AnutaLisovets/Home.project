@@ -1,53 +1,71 @@
 #include "Home.h"
 
+int Home::count = 0;
+
+int Home::getCount() {
+	return count;
+}
+
 Home::Home() {
-    material = "no material";
-    countOfFloors = 1;
-    numberOfInhabitants = 1;
+	count++;
+	material = "no material";
+	countOfFloors = 1;
+	numberOfInhabitants = 1;
 }
 
 //constructor of Student with params
-Home::Home(string material, int countOfFloors, int numberOfInhabitants) {
-    this->material = material;
-    this->countOfFloors = countOfFloors;
-    this->numberOfInhabitants = numberOfInhabitants;
+Home::Home(int number, string material, int countOfFloors, int numberOfInhabitants) {
+	count++;
+	this->material = material;
+	this->countOfFloors = countOfFloors;
+	this->numberOfInhabitants = numberOfInhabitants;
 }
 
 //destructor of Student
 Home::~Home() {
+	count--;
+}
 
+
+int Home::getNumber() {
+	return number;
+}
+void Home::setNumber(int number) {
+	this->number = number;
 }
 
 string Home::getMaterial() {
-    return material;
+	return material;
 }
 
 void Home::setMaterial(string material) {
-    this->material = material;
+	this->material = material;
 }
 
 int Home::getCountOfFloors() {
-    return countOfFloors;
+	return countOfFloors;
 }
 
 void Home::setCountOfFloors(int countOfFloors) {
-    if (countOfFloors >= 1 && countOfFloors <= 100) {
-        this->countOfFloors = countOfFloors;
-    }
+	if (countOfFloors >= MIN_HOME_FLOORS && countOfFloors <= MAX_HOME_FLOORS) {
+		this->countOfFloors = countOfFloors;
+	}
 }
 
 int Home::getNumberOfInhabitants() {
-    return numberOfInhabitants    ;
+
+	return numberOfInhabitants;
 }
 
 void Home::setNumberOfInhabitants(int numberOfInhabitants) {
-    if (numberOfInhabitants >= 0 && numberOfInhabitants <= 1000) {
-        this->numberOfInhabitants = numberOfInhabitants;
-    }
+	if (numberOfInhabitants >= MIN_HOME_INHABITANTS && numberOfInhabitants <= MAX_HOME_INHABITANTS) {
+		this->numberOfInhabitants = numberOfInhabitants;
+	}
 }
 string Home::getInfo() {
-    return "This home made of: " + material + ", count of floors are: " + to_string(countOfFloors) + 
-        ", numberOfInhabitants in this home about: " + to_string(numberOfInhabitants) + "people.";
+	return "This home made of: " + material + ", number of hme is:" + to_string(number) +
+		", count of floors are: " + to_string(countOfFloors) +
+		", numberOfInhabitants in this home about: " + to_string(numberOfInhabitants) + "people.";
 }
 /*string getStringAge() {
  return age;
@@ -59,3 +77,4 @@ void setStringAge(string age) {
    this->age = age;
   }
 }*/
+

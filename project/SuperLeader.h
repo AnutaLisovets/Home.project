@@ -13,7 +13,8 @@ public:
 	//defalt constructor of Home
 	SuperLeader();
 	//constructor of Home with params
-	SuperLeader(string material, int countOfFloors, int numberOfInhabitants, string abiluty);
+	SuperLeader(int number, string material, int countOfFloors, 
+		int numberOfInhabitants, string abiluty);
 	//destructor of Home
 	~SuperLeader();
 

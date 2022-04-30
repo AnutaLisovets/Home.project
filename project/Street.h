@@ -2,34 +2,24 @@
 
 class Street
 {
-	friend class Street;
+	friend class Manager;
 
 private:
 	string name;
-	string material;
-	int number;
-	int count;
+	int size;
 	Home* list;
 
 public:
 	Street();
 	Street(string name);
-	Street(string name, int number, string material, Home* list, int count);
+	Street(string name, Home* list, int size);
 	~Street();
 
+	void add(Home home);
+	Home getCount(int index); /*void add(Home home);*/
+	int getSize();
 	string getName();
 	void setName(string name);
-
-	string getMaterial(); //прочитать
-	void setMaterial(string material);   //изменить
-
-	int getNumber();
-	void setNumber(int number);
-
-	int getCount();
-
-	Home getCount(int index);
-	/*void add(Home home);*/
 
 	string getInfo();
 };

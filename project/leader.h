@@ -4,23 +4,18 @@
 class Leader : public Home
 {
 private:
-  
-    string phoneNumber;
-    string e_mail;
+    int cost;
 
 public:
     //defalt constructor of Home
     Leader();
     //constructor of Home with params
-    Leader(string material, int countOfFloors, int numberOfInhabitants, string phoneNumber, string e_mail);
+    Leader(int number, string material, int countOfFloors, int numberOfInhabitants, int cost);
     //destructor of Home
     ~Leader();
 
-    int getPhoneNumber();
-    void setPhoneNumber(string phoneNumber);
-
-    string getEmail();
-    string setEmail(string e_mail);
+    int getCost();
+    void setCost(int cost);
 
     string getInfo();
 };

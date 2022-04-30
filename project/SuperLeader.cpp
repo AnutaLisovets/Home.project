@@ -2,17 +2,13 @@
 #include "Home.h"
 
 SuperLeader::SuperLeader() {
-    setMaterial("no material");
-    setCountOfFloors(1);
-    setNumberOfInhabitants(1);
+	abiluty = "";
 }
 
 //constructor of Student with params
-SuperLeader::SuperLeader(string material, int countOfFloors, int numberOfInhabitants, string abiluty) {
-    setMaterial("no material");
-    setCountOfFloors(1);
-    setNumberOfInhabitants(1);
-    setAbiluty("no abiluty");
+SuperLeader::SuperLeader(int number, string material, int countOfFloors, int numberOfInhabitants,
+	string abiluty) :Home(number, material, countOfFloors, numberOfInhabitants) {
+	this->abiluty = abiluty;
 }
 
 //destructor of Student
@@ -20,43 +16,16 @@ SuperLeader::~SuperLeader() {
 
 }
 
-string SuperLeader::SuperLeader() {
-    return material;
+string SuperLeader::getAbiluty() {
+	return abiluty;
 }
-
-void SuperLeader::setMaterial(string material) {
-    this->material = material;
-}
-
-int SuperLeader::getCountOfFloors() {
-    return countOfFloors;
-}
-
-void SuperLeader::setCountOfFloors(int countOfFloors) {
-    if (countOfFloors >= 1 && countOfFloors <= 100) {
-        this->countOfFloors = countOfFloors;
-    }
-}
-
-int SuperLeader::getNumberOfInhabitants() {
-    return numberOfInhabitants;
-}
-
-void SuperLeader::setNumberOfInhabitants(int numberOfInhabitants) {
-    if (numberOfInhabitants >= 0 && numberOfInhabitants <= 1000) {
-        this->numberOfInhabitants = numberOfInhabitants;
-    }
-}
-
-string getAbiluty() {
-    return abiluty;
-}
-void setAbiluty(string abiluty) {
-    this->abiluty = abiluty;
+void SuperLeader::setAbiluty(string abiluty) {
+	this->abiluty = abiluty;
 }
 
 string SuperLeader::getInfo() {
-    return "";
+	return Home::getInfo()
+		+ "; abiluty of this home is" + abiluty;
 }
 
 

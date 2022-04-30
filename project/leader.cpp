@@ -1,20 +1,13 @@
 #include "Leader.h"
 
-#include "Home.h"
-
-Leader::Leader() {
-    setMaterial ("no material");
-    setCountOfFloors(1);
-    setNumberOfInhabitants(1);
+Leader::Leader() : Home() {
+	int cost = 0;
 }
 
 //constructor of Student with params
-Leader::Leader(string material, int countOfFloors, int numberOfInhabitants, string phoneNumber, string e_mail) {
-    setMaterial(material);
-    setCountOfFloors(countOfFloors);
-    setNumberOfInhabitants(numberOfInhabitants);
-    setPhoneNumber(phoneNumber);
-    setEmail(e_mail);
+Leader::Leader(int number, string material, int countOfFloors, int numberOfInhabitants,
+	int cost) : Home(number, material, countOfFloors, numberOfInhabitants) {
+	this->cost = cost;
 }
 
 //destructor of Student
@@ -22,8 +15,16 @@ Leader::~Leader() {
 
 }
 
+int Leader::getCost() {
+	return cost;
+}
+void Leader::setCost(int cost) {
+	this->cost = cost;
+}
+
 string Leader::getInfo() {
-    return "";
+	return Home::getInfo()
+		+ "; cost = " + to_string(cost) + "$";
 }
 
 

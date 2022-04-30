@@ -2,24 +2,18 @@
 
 Street::Street() {
 	string name = "no name";
-	string material = "";
-	int number = 0;
-	int count = 0;
+	int size = 0;
 	list = NULL;
 }
 Street::Street(string name) {
-	string material = "no material";
 	this->name = name;
-	int number = 0;
-	int count = 0;
+	int size = 0;
 	list = NULL;
 }
-Street::Street(string name, int number, string material, Home* list, int count) {
+Street::Street(string name, Home* list, int size) {
 	this->name = name;
-	this->number = number;
 	this->list = list;
-	this->count = count;
-	this->material = material;
+	this->size = size;
 }
 Street::~Street() {
 	if (list != NULL) {
@@ -27,69 +21,53 @@ Street::~Street() {
 	}
 }
 
-string Street::getName() {
-	return name;
-}
 void Street::setName(string name) {
 	this->name = name;
 }
 
-int Street::getNumber() {				//прочитать
-	return number;
-}
-void Street::setNumber(int number) {	//изменить
-	if (number > 0) {
-		this->number = number;
-	}
-}
-
-string Street::getMaterial() {
-	return material;
-}
-void Street::setMaterial(string material) {
-	this->material = material;
-}
-
-
-int Street::getCount() {
-	return count;
+void Street::getName(string name) {
+	return name;
 }
 
 Home Street::getCount(int index) {
-	if (list == NULL || index < 0 || index >= count) {
-		return Home("", 0, 0);
+	if (list == NULL || index < 0 || index >= size) {
+		return Home(0, "", 0, 0);
 	}
 
 	return list[index];
 }
 
-//void Street::add(Home home) {
-//	if (list = NULL) {
-//		list = new Home[1];
-//		count = 1;
-//		list[0] = home;
-//	}
-//	else {
-//		Home* temp = new Home[count + 1];
-//		int i = 0;
-//		for (; i < count; i++) {
-//			temp[i] = list[i];
-//		}
-//		temp[i] = home;
-//		delete[] list;
-//		list = temp;
-//		count++;
-//	}
-//}
+int Street::getSize() {
+	return size;
+}
+
+void Street::add(Home home) {
+	if (list = NULL) {
+		list = new Home[1];
+		list[0] = home;
+		size = 1;
+	}
+	else {
+		Home* temp = new Home[size + 1];
+		int i = 0;
+		for (; i < size; i++) {
+			temp[i] = list[i];
+		}
+		temp[i] = home;
+		size++;
+		delete[] list;
+		list = temp;
+	}
+}
 
 string Street::getInfo() {
 	if (list == NULL) {
-		return "Street with homes made of" + material + " material is empty.";
+		return "Street with homes named as" + name + "  is empty.";
 	}
 
-	string msg = "Homes of" + name + "street: \n";
+	string msg = "Homes named as " + name + " : \n";
 
-	for (int i = 0; i < count; i++)
+	for (int i = 0; i < size; i++)
 	{
 		msg += list[i].getInfo() + "\n";
 	}
