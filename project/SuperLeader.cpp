@@ -19,6 +19,7 @@ SuperLeader::~SuperLeader() {
 string SuperLeader::getAbiluty() {
 	return abiluty;
 }
+
 void SuperLeader::setAbiluty(string abiluty) {
 	this->abiluty = abiluty;
 }

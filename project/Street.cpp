@@ -25,7 +25,7 @@ void Street::setName(string name) {
 	this->name = name;
 }
 
-void Street::getName(string name) {
+string Street::getName() {
 	return name;
 }
 
